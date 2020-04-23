@@ -1,7 +1,7 @@
 import * as myModule from "../index"
 import * as env from "../env";
 
-const event = {};
+const event = {}
 const context = {};
 
 (async() => {
