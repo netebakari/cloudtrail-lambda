@@ -5,13 +5,19 @@ export interface LoginType {
   userIdentity: {
     type: "IAMUser" | "Root";
     principalId: string;
-    arn: string;
+    /**
+     * ログイン失敗の場合は値なし
+     */
+    arn?: string;
     accountId: string;
+    /**
+     * root userの場合は値なし
+     */
     userName?: string;
     /**
-     * IAM Userの場合は値なし
+     * IAM Userの場合は値なし、root userの場合は空文字
      */
-    accessKeyId?: string;
+    accessKeyId?: "";
   };
   eventTime: string;
   eventSource: "signin.amazonaws.com";
@@ -19,6 +25,7 @@ export interface LoginType {
   awsRegion: string;
   sourceIPAddress: string;
   userAgent: string;
+  errorMessage?: string;
   requestParameters: null;
   responseElements: {
     ConsoleLogin: "Success" | "Failure";

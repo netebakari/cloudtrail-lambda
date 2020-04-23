@@ -9,6 +9,7 @@ export interface CloudTrailLogType {
   awsRegion: string;
   sourceIPAddress: string;
   userAgent: string;
+  errorMessage?: string;
   requestParameters: object | null;
   responseElements: object | null;
   requestID?: string;
@@ -76,6 +77,9 @@ export function AssertsCloudTrailLogType(arg: any): asserts arg is CloudTrailLog
   }
   if (typeof arg.userAgent !== "string") {
     throw new AssertionError({ message: "arg.userAgent is not string", actual: arg.userAgent });
+  }
+  if (arg.errorMessage !== undefined && typeof arg.errorMessage !== "string") {
+    throw new AssertionError({ message: "arg.errorMessage is neither undefined nor string", actual: arg.errorMessage });
   }
   if (arg.requestID !== undefined && typeof arg.requestID !== "string") {
     throw new AssertionError({ message: "arg.requestID is neither undefined nor string", actual: arg.requestID });

@@ -1,0 +1,28 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+    "arn": "arn:aws:iam::111122223333:user/anaya",
+    "accountId": "111122223333",
+    "userName": "anaya"
+  },
+  "eventTime": "2020-04-23T08:34:09Z",
+  "eventSource": "signin.amazonaws.com",
+  "eventName": "ConsoleLogin",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "192.0.2.0",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.113 Safari/537.36",
+  "requestParameters": null,
+  "responseElements": {
+    "ConsoleLogin": "Success"
+  },
+  "additionalEventData": {
+    "LoginTo": "https://console.aws.amazon.com/console/home?state=hashArgs%23&isauthcode=true",
+    "MobileVersion": "No",
+    "MFAUsed": "No"
+  },
+  "eventID": "3fcfb182-98f8-4744-bd45-10a395ab61cb",
+  "eventType": "AwsConsoleSignIn",
+  "recipientAccountId": "111122223333"
+}
