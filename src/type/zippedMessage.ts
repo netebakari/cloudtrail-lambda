@@ -1,4 +1,5 @@
 import { AssertionError } from "assert";
+import { mustBeObject } from "./index";
 
 export type ZippedCloudWatchLogType = {
   awslogs: {
@@ -7,12 +8,7 @@ export type ZippedCloudWatchLogType = {
 };
 
 export function AssertsZippedCloudWatchLogType(arg: any): asserts arg is ZippedCloudWatchLogType {
-  if (arg === undefined || arg == null) {
-    throw new AssertionError({ message: "arg is undefined or null" });
-  }
-  if (typeof arg !== "object") {
-    throw new AssertionError({ message: "arg is not object" });
-  }
+  mustBeObject(arg);
   if (typeof arg.awslogs !== "object") {
     throw new AssertionError({ message: "arg.awslogs is not object" });
   }

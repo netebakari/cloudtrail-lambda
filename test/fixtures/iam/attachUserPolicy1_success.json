@@ -1,0 +1,39 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAKCEVSQ6C2REXAMPLE:LAMBDA-POLICY-NAME",
+    "arn": "arn:aws:sts::111122223333:assumed-role/LAMBDA-ROLE-NAME/LAMBDA-POLICY-NAME",
+    "accountId": "111122223333",
+    "accessKeyId": "ASIAKCEVSQ6C2EXAMPLE",
+    "sessionContext": {
+      "sessionIssuer": {
+        "type": "Role",
+        "principalId": "AROAKCEVSQ6C2REXAMPLE",
+        "arn": "arn:aws:iam::111122223333:role/service-role/LAMBDA-ROLE-NAME",
+        "accountId": "111122223333",
+        "userName": "LAMBDA-ROLE-NAME"
+      },
+      "webIdFederationData": {},
+      "attributes": {
+        "mfaAuthenticated": "false",
+        "creationDate": "2020-04-24T02:56:57Z"
+      }
+    }
+  },
+  "eventTime": "2020-04-24T02:57:01Z",
+  "eventSource": "iam.amazonaws.com",
+  "eventName": "AttachUserPolicy",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "13.230.96.3",
+  "userAgent": "aws-sdk-nodejs/2.631.0 linux/v12.16.1 exec-env/AWS_Lambda_nodejs12.x promise",
+  "requestParameters": {
+    "userName": "username",
+    "policyArn": "arn:aws:iam::111122223333:policy/NEW-POLICY-NAME"
+  },
+  "responseElements": null,
+  "requestID": "3fcfb182-98f8-4744-bd45-bbbbbbbbbbbb",
+  "eventID": "3fcfb182-98f8-4744-bd45-aaaaaaaaaaaa",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "111122223333"
+}

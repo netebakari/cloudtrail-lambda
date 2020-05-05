@@ -1,0 +1,35 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "Root",
+    "principalId": "111122223333",
+    "arn": "arn:aws:iam::111122223333:root",
+    "accountId": "111122223333",
+    "accessKeyId": "ASIAKCEVSQ6C2EXAMPLE",
+    "userName": "ACCOUNTNAME",
+    "sessionContext": {
+      "sessionIssuer": {},
+      "webIdFederationData": {},
+      "attributes": {
+        "mfaAuthenticated": "true",
+        "creationDate": "2020-04-24T00:23:02Z"
+      }
+    }
+  },
+  "eventTime": "2020-04-24T02:26:57Z",
+  "eventSource": "iam.amazonaws.com",
+  "eventName": "PutRolePolicy",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "192.0.2.0",
+  "userAgent": "console.amazonaws.com",
+  "requestParameters": {
+    "roleName": "NEW-ROLE-NAME",
+    "policyName": "IAM",
+    "policyDocument": "{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Sid\": \"VisualEditor0\",\n            \"Effect\": \"Allow\",\n            \"Action\": [\n                \"iam:CreatePolicy\",\n                \"iam:GetPolicy\",\n                \"iam:ListEntitiesForPolicy\",\n                \"iam:AttachUserPolicy\",\n                \"iam:DeletePolicy\",\n                \"iam:GetUser\",\n                \"iam:DetachUserPolicy\"\n            ],\n            \"Resource\": \"*\"\n        }\n    ]\n}"
+  },
+  "responseElements": null,
+  "requestID": "3fcfb182-98f8-4744-bd45-bbbbbbbbbbbb",
+  "eventID": "3fcfb182-98f8-4744-bd45-aaaaaaaaaaaa",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "111122223333"
+}

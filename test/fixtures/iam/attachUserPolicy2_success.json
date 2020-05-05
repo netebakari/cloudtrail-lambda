@@ -1,0 +1,26 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+    "arn": "arn:aws:iam::111122223333:user/username",
+    "accountId": "111122223333",
+    "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+    "userName": "username"
+  },
+  "eventTime": "2020-04-24T00:35:21Z",
+  "eventSource": "iam.amazonaws.com",
+  "eventName": "AttachUserPolicy",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "192.0.2.0",
+  "userAgent": "aws-sdk-nodejs/2.656.0 linux/v12.16.1 promise",
+  "requestParameters": {
+    "userName": "username",
+    "policyArn": "arn:aws:iam::111122223333:policy/NEW-POLICY-NAME"
+  },
+  "responseElements": null,
+  "requestID": "3fcfb182-98f8-4744-bd45-bbbbbbbbbbbb",
+  "eventID": "3fcfb182-98f8-4744-bd45-aaaaaaaaaaaa",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "111122223333"
+}

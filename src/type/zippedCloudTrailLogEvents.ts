@@ -1,3 +1,4 @@
+import { mustBeObject, mustBeString } from "./index";
 import { AssertionError } from "assert";
 
 export interface ZippedCloudTrailLogEventsType {
@@ -14,24 +15,13 @@ export interface ZippedCloudTrailLogEventsType {
 }
 
 export function AssertsZippedCloudTrailLogEventsType(arg: any): asserts arg is ZippedCloudTrailLogEventsType {
-  if (arg === undefined || arg == null) {
-    throw new AssertionError({ message: "arg is undefined or null" });
-  }
-  if (typeof arg !== "object") {
-    throw new AssertionError({ message: "arg is not object" });
-  }
+  mustBeObject(arg);
   if (arg.messageType !== "DATA_MESSAGE") {
     throw new AssertionError({ message: "arg.messageType is not 'DATA_MESSAGE'", actual: arg.messageType });
   }
-  if (typeof arg.owner !== "string") {
-    throw new AssertionError({ message: "arg.owner is not string", actual: arg.owner });
-  }
-  if (typeof arg.logGroup !== "string") {
-    throw new AssertionError({ message: "arg.logGroup is not string", actual: arg.logGroup });
-  }
-  if (typeof arg.logStream !== "string") {
-    throw new AssertionError({ message: "arg.logStream is not string", actual: arg.logStream });
-  }
+  mustBeString(arg, "owner");
+  mustBeString(arg, "logGroup");
+  mustBeString(arg, "logStream");
   if (!Array.isArray(arg.subscriptionFilters)) {
     throw new AssertionError({ message: "arg.subscriptionFilters is not Array", actual: arg.subscriptionFilters });
   }

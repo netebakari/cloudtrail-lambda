@@ -1,7 +1,6 @@
-import * as cloudTrailLog from "../cloudTrailLog";
+import { CloudTrailLogType } from "../cloudTrailLog";
 
-export interface LoginType {
-  eventVersion: string;
+export interface LoginType extends CloudTrailLogType {
   userIdentity: {
     type: "IAMUser" | "Root";
     principalId: string;
@@ -19,13 +18,8 @@ export interface LoginType {
      */
     accessKeyId?: "";
   };
-  eventTime: string;
   eventSource: "signin.amazonaws.com";
   eventName: "ConsoleLogin";
-  awsRegion: string;
-  sourceIPAddress: string;
-  userAgent: string;
-  errorMessage?: string;
   requestParameters: null;
   responseElements: {
     ConsoleLogin: "Success" | "Failure";
@@ -35,12 +29,10 @@ export interface LoginType {
     MobileVersion: "No" | "Yes";
     MFAUsed: "No" | "Yes";
   };
-  eventID: string;
   eventType: "AwsConsoleSignIn";
-  recipientAccountId: string;
 }
 
-export function IsLoginType(arg: cloudTrailLog.CloudTrailLogType): arg is LoginType {
+export function IsLoginType(arg: CloudTrailLogType): arg is LoginType {
   return (
     arg.eventType === "AwsConsoleSignIn" &&
     arg.eventName === "ConsoleLogin" &&

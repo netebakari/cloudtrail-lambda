@@ -10,19 +10,9 @@ exports.handler = async (event: any, context: LambdaTypes.Context): Promise<bool
   const messages = await parser.parse(event);
   for (const message of messages) {
     console.log(JSON.stringify(message));
-
-    if (typeof message !== "string") {
-      if (customTypes.IsLoginType(message)) {
-        console.log("--LOGIN--");
-        console.log(`UserType=${message.userIdentity.type}`);
-        console.log(`UserName=${message.userIdentity.userName}`);
-        console.log(`Result=${message.responseElements.ConsoleLogin}`);
-      } else {
-        console.log(`EventType: ${message.eventType}`);
-        console.log(`EventName: ${message.eventName}`);
-      }
+    if (customTypes.IsKnownEventType(message)) {
+      // TODO: SNSに投げる
     }
-    console.log("--------");
   }
   return true;
 };

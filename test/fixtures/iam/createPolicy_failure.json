@@ -1,0 +1,29 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+    "arn": "arn:aws:iam::111122223333:user/username",
+    "accountId": "111122223333",
+    "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+    "userName": "username"
+  },
+  "eventTime": "2020-04-24T00:34:49Z",
+  "eventSource": "iam.amazonaws.com",
+  "eventName": "CreatePolicy",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "192.0.2.0",
+  "userAgent": "aws-sdk-nodejs/2.656.0 linux/v12.16.1 promise",
+  "errorCode": "EntityAlreadyExistsException",
+  "errorMessage": "A policy called NEW-POLICYNAME already exists. Duplicate names are not allowed.",
+  "requestParameters": {
+    "policyName": "NEW-POLICYNAME",
+    "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"VisualEditor0\",\"Effect\":\"Allow\",\"Action\":\"ssm:StartSession\",\"Resource\":[\"arn:aws:ec2:ap-northeast-1:111122223333:instance/i-01234567890123456\"],\"Condition\":{\"DateGreaterThan\":{\"aws:CurrentTime\":\"2020-04-24T00:34:50+00:00\"},\"DateLessThan\":{\"aws:CurrentTime\":\"2020-04-24T01:34:50+00:00\"}}},{\"Effect\":\"Allow\",\"Action\":[\"ssm:TerminateSession\"],\"Resource\":[\"arn:aws:ssm:*:*:session/${aws:username}-*\"]}]}",
+    "description": "DESCRIPTION"
+  },
+  "responseElements": null,
+  "requestID": "3fcfb182-98f8-4744-bd45-bbbbbbbbbbbb",
+  "eventID": "3fcfb182-98f8-4744-bd45-aaaaaaaaaaaa",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "111122223333"
+}
