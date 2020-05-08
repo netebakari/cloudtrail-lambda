@@ -11,15 +11,16 @@ CloudTrailのCloudWatch LogsをサブスクライブしてこのLambdaを実行�
 
 * [フィルター](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html)で大雑把に必要なものを取り出す
 * さらにこのLambdaで必要なものを取り出してSNSに投げる
-* SNSで受けて何かをする（Slackに通知するなど）
+* SNSをトリガーとして何かをする（Slackに通知するなど）
 
 SNSに投げた後は関知しない。
 
 # 詳細
 現時点でこのLambdaが拾うのは次のイベント。
 
-* コンソールへのログイン（Rootユーザー、IAMユーザーともに）
+* コンソールへのログイン（Rootユーザー、IAMユーザー）
 * IAM Policyの作成
-* IAM Policyのアタッチ（ユーザー、グループ、ロール）
-* Security Groupのアタッチ
+* IAM Policyのユーザーへのアタッチ
+* Security Groupの変更
+
 

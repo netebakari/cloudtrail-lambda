@@ -1,0 +1,49 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+    "arn": "arn:aws:iam::999999999999:user/username",
+    "accountId": "999999999999",
+    "accessKeyId": "ASIAIOSFODNN7EXAMPLE",
+    "userName": "username",
+    "sessionContext": {
+      "sessionIssuer": {},
+      "webIdFederationData": {},
+      "attributes": {
+        "mfaAuthenticated": "true",
+        "creationDate": "2020-05-08T07:24:31Z"
+      }
+    }
+  },
+  "eventTime": "2020-05-08T08:49:08Z",
+  "eventSource": "ec2.amazonaws.com",
+  "eventName": "ModifyNetworkInterfaceAttribute",
+  "awsRegion": "ap-northeast-1",
+  "sourceIPAddress": "192.0.2.0",
+  "userAgent": "console.ec2.amazonaws.com",
+  "requestParameters": {
+    "networkInterfaceId": "eni-01234567890abcdef",
+    "groupSet": {
+      "items": [
+        {
+          "groupId": "sg-01234567890abcdef"
+        },
+        {
+          "groupId": "sg-1234567890abcdef0"
+        },
+        {
+          "groupId": "sg-234567890abcdef01"
+        }
+      ]
+    }
+  },
+  "responseElements": {
+    "requestId": "df76b0be-69a5-4444-aaaa-cccccccccccc",
+    "_return": true
+  },
+  "requestID": "3fcfb182-98f8-4744-bd45-bbbbbbbbbbbb",
+  "eventID": "3fcfb182-98f8-4744-bd45-aaaaaaaaaaaa",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "999999999999"
+}

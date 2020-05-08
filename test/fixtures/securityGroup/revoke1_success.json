@@ -1,0 +1,55 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+    "arn": "arn:aws:iam::999999999999:user/username",
+    "accountId": "999999999999",
+    "accessKeyId": "ASIAIOSFODNN7EXAMPLE",
+    "userName": "username",
+    "sessionContext": {
+      "sessionIssuer": {},
+      "webIdFederationData": {},
+      "attributes": {
+        "mfaAuthenticated": "true",
+        "creationDate": "2020-05-08T07:24:31Z"
+      }
+    }
+  },
+  "eventTime": "2020-05-08T08:28:43Z",
+  "eventSource": "ec2.amazonaws.com",
+  "eventName": "RevokeSecurityGroupIngress",
+  "awsRegion": "ap-northeast-1",
+  "sourceIPAddress": "192.0.2.0",
+  "userAgent": "console.ec2.amazonaws.com",
+  "requestParameters": {
+    "groupId": "sg-01234567890abcdef",
+    "ipPermissions": {
+      "items": [
+        {
+          "ipProtocol": "tcp",
+          "fromPort": 3306,
+          "toPort": 3306,
+          "groups": {},
+          "ipRanges": {
+            "items": [
+              {
+                "cidrIp": "203.0.113.1/32"
+              }
+            ]
+          },
+          "ipv6Ranges": {},
+          "prefixListIds": {}
+        }
+      ]
+    }
+  },
+  "responseElements": {
+    "requestId": "df76b0be-69a5-4444-aaaa-cccccccccccc",
+    "_return": true
+  },
+  "requestID": "3fcfb182-98f8-4744-bd45-bbbbbbbbbbbb",
+  "eventID": "3fcfb182-98f8-4744-bd45-aaaaaaaaaaaa",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "999999999999"
+}

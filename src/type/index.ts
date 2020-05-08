@@ -4,11 +4,24 @@ export const mustBeString = (arg: any, propertyName: string, undefinedAllowed = 
   const value = arg[propertyName];
   if (undefinedAllowed) {
     if (value !== undefined && typeof value !== "string") {
-      throw new AssertionError({ message: `arg.${propertyName} is neigther undefined not string`, actual: value });
+      throw new AssertionError({ message: `arg.${propertyName} is neigther undefined not a string`, actual: value });
     }
   } else {
     if (typeof value !== "string") {
-      throw new AssertionError({ message: `arg.${propertyName} is not string`, actual: value });
+      throw new AssertionError({ message: `arg.${propertyName} is not a string`, actual: value });
+    }
+  }
+};
+
+export const mustBeNumber = (arg: any, propertyName: string, undefinedAllowed = false) => {
+  const value = arg[propertyName];
+  if (undefinedAllowed) {
+    if (value !== undefined && typeof value !== "number") {
+      throw new AssertionError({ message: `arg.${propertyName} is neigther undefined not a number`, actual: value });
+    }
+  } else {
+    if (typeof value !== "number") {
+      throw new AssertionError({ message: `arg.${propertyName} is not a number`, actual: value });
     }
   }
 };

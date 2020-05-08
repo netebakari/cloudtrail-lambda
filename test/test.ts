@@ -44,4 +44,17 @@ describe("typeGuards", () => {
       assert.equal(customTypes.IsIAMCreatePolicy(obj), true);
     });
   });
+
+  describe("IsModifySecurityGroupType", () => {
+    it("authorize1_success", () => {
+      const obj = loadJson("securityGroup/authorize1_success.json");
+      AssertsCloudTrailLogType(obj);
+      assert.equal(customTypes.IsModifySecurityGroupType(obj), true);
+    });
+    it("revoke1_success", () => {
+      const obj = loadJson("securityGroup/revoke1_success.json");
+      AssertsCloudTrailLogType(obj);
+      assert.equal(customTypes.IsModifySecurityGroupType(obj), true);
+    });
+  });
 });
